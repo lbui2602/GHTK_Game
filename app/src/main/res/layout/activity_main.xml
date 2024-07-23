@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_game_play"
+        tools:context=".MainActivity">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="@id/img_bg_avt"
+            app:layout_constraintStart_toStartOf="@id/img_bg_avt"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:src="@drawable/ic_avatar" />
+
+        <ImageView
+            android:id="@+id/img_bg_avt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/bg_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_heart"
+            app:layout_constraintEnd_toEndOf="@id/img_bg_avt"
+            app:layout_constraintTop_toTopOf="@id/img_bg_avt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_heart" />
+
+        <TextView
+            android:id="@+id/tv_luot_choi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/img_heart"
+            app:layout_constraintEnd_toEndOf="@id/img_heart"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="@id/img_heart"
+            app:layout_constraintTop_toTopOf="@id/img_heart"
+            app:layout_constraintVertical_bias="0.347" />
+        <ImageView
+            android:id="@+id/bg_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="44dp"
+            android:src="@drawable/bg_coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="0"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/bg_coin"
+            app:layout_constraintEnd_toEndOf="@id/bg_coin"
+            app:layout_constraintHorizontal_bias="0.655"
+            app:layout_constraintStart_toStartOf="@id/bg_coin"
+            app:layout_constraintTop_toTopOf="@id/bg_coin"
+            app:layout_constraintVertical_bias="0.484" />
+        <Button
+            android:id="@+id/btnNext"
+            android:visibility="invisible"
+            android:text="Câu tiếp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_bg_avt"
+            android:layout_width="142dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_next"
+            tools:layout_editor_absoluteX="134dp"
+            tools:layout_editor_absoluteY="120dp" />
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/bg_picture_border"
+            android:id="@+id/bg_picture_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/img_content"
+            android:layout_width="314dp"
+            android:layout_height="362dp"
+            android:src="@drawable/canthiep"
+            app:layout_constraintBottom_toBottomOf="@id/bg_picture_border"
+            app:layout_constraintEnd_toEndOf="@id/bg_picture_border"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="@id/bg_picture_border"
+            app:layout_constraintTop_toTopOf="@id/bg_picture_border"
+            app:layout_constraintVertical_bias="0.518" />
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/tvKetQua"
+            android:text="Ketqua"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/bg_picture_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <GridLayout
+            android:id="@+id/grid_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvKetQua">
+            <!-- Letter buttons will be dynamically added here -->
+        </GridLayout>
+        <GridLayout
+            android:id="@+id/grid_choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_margin="10dp">
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
